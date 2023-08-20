@@ -1,28 +1,29 @@
- export const skillsData = [
+export const skillsData = [
+    'Angular',
+    'React',
+    'Next JS',
+    'Javascript',
+    'Typescript',
+    'Node JS',
+    'MaterialUI',
+    'CSS',
     'HTML',
+    'Tailwind',
+    'Bootstrap',
+    'Figma',
+    'Python',
+    'C',
+    'PHP',
+    'C++',
     'Fastify',
     'Blender',
-    'Figma',
-    'Javascript',
-    'CSS',
-    'React',
     'Django',
-    'Next JS',
-    'Node JS',
     'Photoshop',
     'Illustrator',
     'Microsoft Office',
     'Adobe XD',
     'After Effects',
-    'Bootstrap',
-    'After Effects',
-    'Python',
-    'C++',
-    'C',
-    'PHP',
     'Ruby',
-    'Typescript',
-    'MaterialUI',
     'Tensorflow',
     'MongoDB',
     'MySQL',
@@ -89,7 +90,6 @@
     Ubuntu
     Bootstrap
     MongoDB
-    Tailwind
     ViteJS
     VuetifyJS
     MySQL

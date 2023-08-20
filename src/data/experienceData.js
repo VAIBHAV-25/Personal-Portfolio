@@ -1,23 +1,31 @@
 export const experienceData = [
+    
     {
         id: 1,
-        company: 'Coditas Solutions Pvt. LTD.',
-        jobtitle: 'Associate Software Engineer Intern',
-        startYear: '2022',
+        company: 'Polkassembly',
+        jobtitle: 'Full Stack Developer',
+        startYear: 'Aug 2023',
         endYear: 'Present'
     },
     {
         id: 2,
-        company: 'LakeBrains Technologies',
-        jobtitle: 'AI/ML Engineering Intern',
-        startYear: '2022',
-        endYear: 'Present'
+        company: 'Testbook.com',
+        jobtitle: 'Software Developer Intern',
+        startYear: 'Feb 2023',
+        endYear: 'Aug 2023'
     },
     {
         id: 3,
-        company: 'MIlaan Technologies',
-        jobtitle: 'Web Developer & Data Scientist',
-        startYear: '2021',
-        endYear: '2022'
+        company: 'Chardware',
+        jobtitle: 'Frontend Developer',
+        startYear: 'Nov 2022',
+        endYear: 'Dec 2022'
     },
+    {
+        id: 4,
+        company: 'Coditas Solutions Pvt. LTD.',
+        jobtitle: 'Associate Software Engineer Intern',
+        startYear: '2022',
+        endYear: 'Present'
+    }
 ]
