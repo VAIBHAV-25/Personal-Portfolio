@@ -14,14 +14,14 @@ export const testimonialsData = [
         name: 'Prashant R. Mohta',
         title: 'Testbook',
         text: "Vaibhav joined us as an associate a frontend developer intern. He is passionate, creative and always keen on learning new things.",
-        image: boy3
+        image: boy1
     },
     {
         id: 2,
         name: 'Siddarth Kandola',
         title: 'Testbook',
         text: "Vaibhav started as an frontend developer. His erg of learning and developing new skills is exemptional.",
-        image: boy3
+        image: boy2
     },
     {
         id: 3,
