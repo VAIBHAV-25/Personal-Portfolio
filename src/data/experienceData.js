@@ -10,14 +10,14 @@ export const experienceData = [
     {
         id: 2,
         company: 'Testbook.com',
-        jobtitle: 'Software Developer Intern',
+        jobtitle: 'Frontend Developer',
         startYear: 'Feb 2023',
         endYear: 'Aug 2023'
     },
     {
         id: 3,
         company: 'Chardware',
-        jobtitle: 'Frontend Developer',
+        jobtitle: 'Frontend Developer Intern',
         startYear: 'Nov 2022',
         endYear: 'Dec 2022'
     },
