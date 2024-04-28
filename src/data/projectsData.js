@@ -1,10 +1,3 @@
-import two from '../assets/svg/projects/two.svg'
-import three from '../assets/svg/projects/three.svg'
-import four from '../assets/svg/projects/four.svg'
-import five from '../assets/svg/projects/five.svg'
-import six from '../assets/svg/projects/six.svg'
-import seven from '../assets/svg/projects/seven.svg'
-import eight from '../assets/svg/projects/eight.svg'
 import movie from '../assets/pdf/movie.png'
 import portfolio from '../assets/pdf/portfolio.png'
 import crypto from '../assets/pdf/crypto.png'
@@ -68,15 +61,6 @@ export const projectsData = [
         code: 'https://github.com/VAIBHAV-25?tab=repositories',
         demo: 'https://vizalgotool.netlify.app',
         image: algo
-    },
-    {
-        id: 5,
-        projectName: 'E-Commerce App',
-        projectDesc: 'A Simple E-commerce application',
-        tags: ['HTML', 'CSS', 'Javascript'],
-        code: 'https://github.com/VAIBHAV-25/E-commerce',
-        demo: 'https://github.com/VAIBHAV-25/E-commerce',
-        image: five
     },
     {
         id: 6,
