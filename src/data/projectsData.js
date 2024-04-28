@@ -7,8 +7,10 @@ import seven from '../assets/svg/projects/seven.svg'
 import eight from '../assets/svg/projects/eight.svg'
 import movie from '../assets/pdf/movie.png'
 import portfolio from '../assets/pdf/portfolio.png'
-import rubik from '../assets/pdf/rubik.jpg'
+import crypto from '../assets/pdf/crypto.png'
+import sumz from '../assets/pdf/sumz.png'
 import algo from '../assets/pdf/algo.jpeg'
+import fitpro from '../assets/pdf/fitpro.jpeg'
 import made from '../assets/pdf/made.png'
 import H from '../assets/pdf/H.png'
 import git from '../assets/pdf/git.jpg'
@@ -33,21 +35,39 @@ export const projectsData = [
     },
     {
         id: 3,
+        projectName: 'Crypto My World',
+        projectDesc: 'A simple and attractive webapp where you can find all cryptocurrencies, there market value and their detailed analysis.',
+        tags: ['ReactJs', 'ChartJs', 'JavaScript','TypeScript'],
+        code: 'https://github.com/VAIBHAV-25/CryptoMyWorld',
+        demo: 'https://cryptomyworld.netlify.app/',
+        image: crypto
+    },
+    {
+        id: 4,
+        projectName: 'Text Sumz',
+        projectDesc: 'It leverages the power of OpenAI large language models to automatically generate concise summaries of articles, saving you time and effort.',
+        tags: ['NextJs', 'Tailwind', 'Redux', 'JavaScript','TypeScript'],
+        code: 'https://github.com/VAIBHAV-25/AI-Text-Summariser',
+        demo: 'https://text-sumz.netlify.app/',
+        image: sumz
+    },
+    {
+        id: 5,
+        projectName: 'FitPro.com',
+        projectDesc: 'With the functionality to choose exercise categories and specific muscle groups, browse more than one thousand exercises, exercise details, pull related videos from youtube, display similar exercises, and much more.',
+        tags: ['NextJs', 'Tailwind', 'Redux', 'JavaScript','TypeScript'],
+        code: 'https://github.com/VAIBHAV-25/Fitpro.com',
+        demo: ' https://fitpro.netlify.app/',
+        image: fitpro
+    },
+    {
+        id: 6,
         projectName: 'Algorithm Visualizer',
         projectDesc: 'This is a website where you can see visualization of some famous DSA algorithms.',
         tags: ['NodeJS', 'NextJS', 'React', 'MongoDB'],
         code: 'https://github.com/VAIBHAV-25?tab=repositories',
         demo: 'https://vizalgotool.netlify.app',
         image: algo
-    },
-    {
-        id: 4,
-        projectName: 'Rubiks Cube Solver',
-        projectDesc: 'WebApp which scans unsolved cube and then show AR annotations to solve it.',
-        tags: ['Python', 'AI/ML', 'Kociemba','OpenCV'],
-        code: 'https://github.com/VAIBHAV-25/Rubik-s-Cube-Solver',
-        demo: 'https://github.com/VAIBHAV-25/Rubik-s-Cube-Solver',
-        image: rubik
     },
     {
         id: 5,
@@ -86,19 +106,3 @@ export const projectsData = [
         image: git
     },
 ]
-
-
-// Do not remove any fields.
-// Leave it blank instead as shown below
-
-/* 
-{
-    id: 1,
-    projectName: 'Car Pooling System',
-    projectDesc: '',
-    tags: ['Flutter', 'React'],
-    code: '',
-    demo: '',
-    image: ''
-}, 
-*/
