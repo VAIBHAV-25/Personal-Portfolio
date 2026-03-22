@@ -1,5 +1,5 @@
 import React,{ useContext} from 'react';
-import { Link } from 'react-router-dom'
+
 import { makeStyles } from '@material-ui/core/styles';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
@@ -69,12 +69,12 @@ function Projects() {
 
                         {projectsData.length > 3 && (
                             <div className="projects--viewAll">
-                                <Link to="/projects">
+                                <a href="https://github.com/VAIBHAV-25/" target="_blank" rel="noreferrer">
                                     <button className={classes.viewAllBtn}>
                                         View All
                                         <HiArrowRight className={classes.viewArr} />
                                     </button>
-                                </Link>
+                                </a>
                             </div>
                         )}
                     </div>

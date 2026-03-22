@@ -1,5 +1,6 @@
 .experience{
-    min-height: 100vh;
+    min-height: auto;
+    padding: 4rem 2rem;
 }
 
 .experience-body {

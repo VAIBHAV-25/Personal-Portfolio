@@ -1,6 +1,6 @@
-import movie from '../assets/pdf/movie.png'
-import portfolio from '../assets/pdf/portfolio.png'
-import crypto from '../assets/pdf/crypto.png'
+import npmx from '../assets/pdf/npmx.png'
+import jsonlens from '../assets/pdf/jsonlens.png'
+import resumeai from '../assets/pdf/resumeai.png'
 import sumz from '../assets/pdf/sumz.png'
 import algo from '../assets/pdf/algo.jpeg'
 import fitpro from '../assets/pdf/fitpro.jpeg'
@@ -10,30 +10,30 @@ import git from '../assets/pdf/git.jpg'
 export const projectsData = [
     {
         id: 1,
-        projectName: 'MoviPidea',
-        projectDesc: 'This is a completely responsive web app based on TMDB API, build using React js.',
-        tags: ['React', 'CSS', 'Material Ui', 'APIs'],
-        code: 'https://github.com/VAIBHAV-25/Movipidea',
-        demo: 'https://movipidea.netlify.app',
-        image: movie
+        projectName: 'NPMX - NPM Spark',
+        projectDesc: 'NPMX is a NPM package manager that helps you to manage your NPM packages.',
+        tags: ['NextJs', 'Tailwind', 'TypeScript', 'NPM'],
+        code: 'https://github.com/VAIBHAV-25/npm-spark',
+        demo: 'https://npm-spark.vercel.app/',
+        image: npmx
     },
     {
         id: 2,
-        projectName: 'Personal Portfolio',
-        projectDesc: 'This is my very own personal portfolio with all neccessary information about me',
+        projectName: 'JSON Lens',
+        projectDesc: 'JSON Lens is a JSON viewer that helps you to view JSON data in a tree structure.',
         tags: ['React', 'CSS', 'APIs'],
-        code: 'https://github.com/VAIBHAV-25?tab=repositories',
-        demo: 'https://vaibhavsinghvi.netlify.app',
-        image: portfolio
+        code: 'https://github.com/VAIBHAV-25/JSON-Lens',
+        demo: 'https://json-lens-vs.vercel.app/',
+        image: jsonlens
     },
     {
         id: 3,
-        projectName: 'Crypto My World',
-        projectDesc: 'A simple and attractive webapp where you can find all cryptocurrencies, there market value and their detailed analysis.',
-        tags: ['ReactJs', 'ChartJs', 'JavaScript','TypeScript'],
-        code: 'https://github.com/VAIBHAV-25/CryptoMyWorld',
-        demo: 'https://cryptomyworld.netlify.app/',
-        image: crypto
+        projectName: 'ResumeAI',
+        projectDesc: 'ResumeAI is a resume builder that helps you to build your resume in a few minutes.',
+        tags: ['NextJs', 'Tailwind', 'TypeScript', 'AI'],
+        code: 'https://github.com/VAIBHAV-25/ResumeAI',
+        demo: 'https://analyzeresumeai.netlify.app/',
+        image: resumeai
     },
     {
         id: 4,

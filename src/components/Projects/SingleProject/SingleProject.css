@@ -1,108 +1,151 @@
+/* ── Card shell ─────────────────────────────────────────── */
 .singleProject {
-    box-shadow: 4px 4px 8px rgba(36, 3, 3, 0.2);
-    width: 304px;
-    height: 360px;
-    border-radius: 10px;
+    width: 340px;
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1.4rem 2rem;
-    position: relative;
+    overflow: hidden;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.singleProject:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35), 0 0 0 1.5px rgba(255,255,255,0.08);
+}
+
+/* ── Image wrapper (16:9) ───────────────────────────────── */
+.projectImageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.projectImageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.singleProject:hover .projectImageWrapper img {
+    transform: scale(1.05);
+    filter: brightness(0.35);
+}
+
+/* ── Hover overlay (desc + tags) ────────────────────────── */
+.projectOverlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 1rem 1.1rem 1rem;
+    gap: 0.6rem;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.singleProject:hover .projectOverlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project--desc {
+    font-family: var(--primaryFont);
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: #ffffff;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
+.project--lang {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.project--lang span {
+    font-family: var(--primaryFont);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* ── Card footer (title + buttons) ─────────────────────── */
 .projectContent {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    height: 100%;
+    padding: 0.85rem 1.1rem;
+    gap: 0.5rem;
 }
 
-.projectContent > h2 {
+.projectContent h2 {
     font-family: var(--primaryFont);
-    font-style: normal;
     font-weight: 600;
-    font-size: 1.525rem;
-    line-height: 110%;
-    text-align: center;
+    font-size: 1rem;
+    line-height: 1.2;
+    margin: 0;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.projectContent > img {
-    width: 100%;
-    height: 60%;
-    transition: opacity 0.7s 0.3s;
-}
-
-.singleProject:hover img{
-    opacity: 0;
-}
-
+/* ── Action buttons ─────────────────────────────────────── */
 .project--showcaseBtn {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    gap: 0.5rem;
+    flex-shrink: 0;
 }
 
 .project--showcaseBtn > a {
     cursor: pointer;
     text-decoration: none;
-    transition: transform 0.5s 0.3s;
-}
-
-.singleProject:hover .project--showcaseBtn a:nth-child(2) {
-    transform: translateX(-140px) scale(1.1) !important;
-}
-
-
-.singleProject .project--desc{
-    position: absolute;
-    width: 95%;
-    height: 160px;
-    left: 0;
-    top: 0;
-    transform: translate(-110%,40%);
-    padding: 15px;
-    border-radius: 0 20px 20px 0;
-    transition: transform 0.9s;
-    line-height: 110%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--primaryFont);
-}
-  
-.singleProject:hover .project--desc{
-    transform: translate(-2%,40%);
-}
-  
-.singleProject .project--lang{
-    position: absolute;
-    bottom: 20px;
-    right: 0;
-    width: 140px;
-    font-size: 0.8rem;
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    flex-direction: column;
-    border-radius: 10px 0 0 10px;
-    transform: translateX(100%);
-    transition: transform 0.5s 0.3s;
-    padding: 0.825rem;
-}
-  
-.singleProject:hover .project--lang{
-    transform: translateX(0);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.project--lang > span {
-    font-family: var(--primaryFont);
-    font-weight: 500;
-    word-break: break-word; 
-    line-height: 100%;
+.project--showcaseBtn > a:hover {
+    transform: scale(1.12);
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media screen and (max-width: 992px) {
+    .singleProject {
+        width: 90%;
+        max-width: 420px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .singleProject {
+        max-width: 100%;
+    }
 }

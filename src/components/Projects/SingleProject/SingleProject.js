@@ -7,108 +7,88 @@ import placeholder from '../../../assets/png/placeholder.png';
 import './SingleProject.css';
 
 function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
-    const useStyles = makeStyles((t) => ({
+    const useStyles = makeStyles(() => ({
+        card: {
+            backgroundColor: theme.primary400,
+            boxShadow: `0 4px 20px rgba(0,0,0,0.2)`,
+        },
         iconBtn: {
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: 40,
-            height: 40,
-            borderRadius: 50,
             border: `2px solid ${theme.tertiary}`,
             color: theme.tertiary,
+            backgroundColor: 'transparent',
             transition: 'all 0.2s',
             '&:hover': {
-                backgroundColor: theme.secondary,
+                backgroundColor: theme.tertiary,
                 color: theme.primary,
-                transform: 'scale(1.1)',
-                border: `2px solid ${theme.secondary}`,
+                border: `2px solid ${theme.tertiary}`,
+                boxShadow: `0 0 10px ${theme.tertiary}55`,
             },
         },
         icon: {
-            fontSize: '1.1rem',
-            transition: 'all 0.2s',
-            '&:hover': {},
+            fontSize: '0.9rem',
         },
     }));
 
     const classes = useStyles();
 
+    const slug = name.replace(/ /g, '-').toLowerCase();
+
     return (
         <Fade bottom>
             <div
                 key={id}
-                className='singleProject'
+                className={`singleProject ${classes.card}`}
                 style={{ backgroundColor: theme.primary400 }}
             >
-                <div className='projectContent'>
+                {/* ── Image + hover overlay ── */}
+                <div className="projectImageWrapper">
+                    <img src={image ? image : placeholder} alt={name} />
+                    <div className="projectOverlay">
+                        <p className="project--desc">{desc}</p>
+                        <div className="project--lang">
+                            {tags.map((tag, i) => (
+                                <span key={i}>{tag}</span>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* ── Footer: title + buttons ── */}
+                <div className="projectContent">
                     <h2
-                        id={name.replace(' ', '-').toLowerCase()}
+                        id={slug}
                         style={{ color: theme.tertiary }}
                     >
                         {name}
                     </h2>
-                    <img src={image ? image : placeholder} alt={name} />
-                    <div className='project--showcaseBtn'>
+                    <div className="project--showcaseBtn">
                         <a
                             href={demo}
-                            target='_blank'
-                            rel='noreferrer'
+                            target="_blank"
+                            rel="noreferrer"
                             className={classes.iconBtn}
-                            aria-labelledby={`${name
-                                .replace(' ', '-')
-                                .toLowerCase()} ${name
-                                .replace(' ', '-')
-                                .toLowerCase()}-demo`}
+                            aria-labelledby={`${slug} ${slug}-demo`}
                         >
                             <FaPlay
-                                id={`${name
-                                    .replace(' ', '-')
-                                    .toLowerCase()}-demo`}
+                                id={`${slug}-demo`}
                                 className={classes.icon}
-                                aria-label='Demo'
+                                aria-label="Demo"
                             />
                         </a>
                         <a
                             href={code}
-                            target='_blank'
-                            rel='noreferrer'
+                            target="_blank"
+                            rel="noreferrer"
                             className={classes.iconBtn}
-                            aria-labelledby={`${name
-                                .replace(' ', '-')
-                                .toLowerCase()} ${name
-                                .replace(' ', '-')
-                                .toLowerCase()}-code`}
+                            aria-labelledby={`${slug} ${slug}-code`}
                         >
                             <FaCode
-                                id={`${name
-                                    .replace(' ', '-')
-                                    .toLowerCase()}-code`}
+                                id={`${slug}-code`}
                                 className={classes.icon}
-                                aria-label='Code'
+                                aria-label="Code"
                             />
                         </a>
                     </div>
-                </div>
-                <p
-                    className='project--desc'
-                    style={{
-                        background: theme.secondary,
-                        color: theme.tertiary,
-                    }}
-                >
-                    {desc}
-                </p>
-                <div
-                    className='project--lang'
-                    style={{
-                        background: theme.secondary,
-                        color: theme.tertiary80,
-                    }}
-                >
-                    {tags.map((tag, id) => (
-                        <span key={id}>{tag}</span>
-                    ))}
                 </div>
             </div>
         </Fade>

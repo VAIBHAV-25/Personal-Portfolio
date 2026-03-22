@@ -1,10 +1,10 @@
 .achievement {
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 3rem;
+    padding: 4rem 3rem;
 }
 
 .achievement-body {
