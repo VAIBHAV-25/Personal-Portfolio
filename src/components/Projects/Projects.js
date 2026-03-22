@@ -52,7 +52,7 @@ function Projects() {
                     </div>
                     <div className="projects--body">
                         <div className="projects--bodyContainer">
-                            {projectsData.slice(0, 3).map(project => (
+                            {projectsData.slice(0, 6).map(project => (
                                 <SingleProject
                                     theme={theme}
                                     key={project.id}
@@ -67,7 +67,7 @@ function Projects() {
                             ))}
                         </div> 
 
-                        {projectsData.length > 3 && (
+                        {projectsData.length > 6 && (
                             <div className="projects--viewAll">
                                 <a href="https://github.com/VAIBHAV-25/" target="_blank" rel="noreferrer">
                                     <button className={classes.viewAllBtn}>

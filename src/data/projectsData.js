@@ -3,7 +3,7 @@ import jsonlens from '../assets/pdf/jsonlens.png'
 import resumeai from '../assets/pdf/resumeai.png'
 import sumz from '../assets/pdf/sumz.png'
 import algo from '../assets/pdf/algo.jpeg'
-import fitpro from '../assets/pdf/fitpro.jpeg'
+import smartSplit from '../assets/pdf/smartSplit.png'
 import made from '../assets/pdf/made.png'
 import H from '../assets/pdf/H.png'
 import git from '../assets/pdf/git.jpg'
@@ -46,12 +46,12 @@ export const projectsData = [
     },
     {
         id: 5,
-        projectName: 'FitPro.com',
-        projectDesc: 'With the functionality to choose exercise categories and specific muscle groups, browse more than one thousand exercises, exercise details, pull related videos from youtube, display similar exercises, and much more.',
+        projectName: 'SplitSmart',
+        projectDesc: 'SplitSmart is a modern, AI-powered expense sharing application designed to simplify group expense management.',
         tags: ['NextJs', 'Tailwind', 'Redux', 'JavaScript','TypeScript'],
-        code: 'https://github.com/VAIBHAV-25/Fitpro.com',
-        demo: ' https://fitpro.netlify.app/',
-        image: fitpro
+        code: 'https://github.com/VAIBHAV-25/ExpenseTracker',
+        demo: 'https://bright-bonbon-42beac.netlify.app/',
+        image: smartSplit
     },
     {
         id: 6,

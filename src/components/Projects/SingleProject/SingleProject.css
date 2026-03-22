@@ -1,7 +1,7 @@
 /* ── Card shell ─────────────────────────────────────────── */
 .singleProject {
-    width: 340px;
-    border-radius: 16px;
+    width: 100%;
+    border-radius: 18px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -11,15 +11,15 @@
 }
 
 .singleProject:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35), 0 0 0 1.5px rgba(255,255,255,0.08);
+    transform: translateY(-7px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 0 1.5px rgba(255,255,255,0.07);
 }
 
-/* ── Image wrapper (16:9) ───────────────────────────────── */
+/* ── Image wrapper (16:10) ──────────────────────────────── */
 .projectImageWrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 10;
     overflow: hidden;
     flex-shrink: 0;
 }
@@ -34,8 +34,8 @@
 }
 
 .singleProject:hover .projectImageWrapper img {
-    transform: scale(1.05);
-    filter: brightness(0.35);
+    transform: scale(1.06);
+    filter: brightness(0.28);
 }
 
 /* ── Hover overlay (desc + tags) ────────────────────────── */
@@ -46,10 +46,10 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
-    padding: 1rem 1.1rem 1rem;
-    gap: 0.6rem;
+    padding: 1.25rem 1.3rem 1.1rem;
+    gap: 0.65rem;
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(14px);
     transition: opacity 0.4s ease, transform 0.4s ease;
     pointer-events: none;
     z-index: 2;
@@ -62,12 +62,13 @@
 
 .project--desc {
     font-family: var(--primaryFont);
-    font-size: 0.82rem;
-    line-height: 1.45;
+    font-size: 0.87rem;
+    line-height: 1.5;
     color: #ffffff;
     margin: 0;
     display: -webkit-box;
     -webkit-line-clamp: 4;
+    line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -75,20 +76,20 @@
 .project--lang {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.35rem;
+    gap: 0.38rem;
 }
 
 .project--lang span {
     font-family: var(--primaryFont);
-    font-size: 0.7rem;
+    font-size: 0.72rem;
     font-weight: 600;
-    padding: 0.2rem 0.55rem;
+    padding: 0.22rem 0.6rem;
     border-radius: 999px;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
     background: rgba(255, 255, 255, 0.15);
     color: #ffffff;
     backdrop-filter: blur(4px);
-    border: 1px solid rgba(255,255,255,0.25);
+    border: 1px solid rgba(255,255,255,0.28);
 }
 
 /* ── Card footer (title + buttons) ─────────────────────── */
@@ -96,14 +97,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.85rem 1.1rem;
+    padding: 0.9rem 1.2rem;
     gap: 0.5rem;
 }
 
 .projectContent h2 {
     font-family: var(--primaryFont);
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.05rem;
     line-height: 1.2;
     margin: 0;
     flex: 1;
@@ -126,26 +127,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project--showcaseBtn > a:hover {
-    transform: scale(1.12);
+    transform: scale(1.15);
 }
 
 /* ── Responsive ─────────────────────────────────────────── */
-@media screen and (max-width: 992px) {
-    .singleProject {
-        width: 90%;
-        max-width: 420px;
-    }
-}
-
 @media screen and (max-width: 480px) {
-    .singleProject {
-        max-width: 100%;
+    .projectContent h2 {
+        font-size: 0.95rem;
     }
 }

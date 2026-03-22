@@ -5,7 +5,7 @@
     justify-content: flex-start;
     min-height: auto;
     overflow-x: hidden;
-    padding: 2.5rem 2rem 2.5rem;
+    padding: 3rem 3rem 3.5rem;
 }
 
 /* ── Section heading ─────────────────────────────────────── */
@@ -46,19 +46,20 @@
     margin-top: 2.5rem;
 }
 
+/* 3-column grid — cards fill their cells */
 .projects--bodyContainer {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
     width: 100%;
+    max-width: 1200px;
 }
 
 /* ── View All button ─────────────────────────────────────── */
 .projects--viewAll {
     width: 100%;
-    padding: 2rem 0.5rem 0;
+    max-width: 1200px;
+    padding: 1.75rem 0 0;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -87,26 +88,30 @@
 }
 
 /* ── Responsive ──────────────────────────────────────────── */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1100px) {
     .projects--bodyContainer {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 680px) {
+    .projects {
+        padding: 3rem 1.25rem 3rem;
+    }
+    .projects--bodyContainer {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+    }
     .projects--header h1 {
         font-size: 3rem;
     }
-}
-
-@media screen and (max-width: 600px) {
-    .projects--header h1 {
-        font-size: 2.5rem;
-    }
     .projects--viewAll {
         justify-content: center;
-        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .projects--header h1 {
+        font-size: 2.5rem;
     }
 }
