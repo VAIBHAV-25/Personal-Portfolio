@@ -49,7 +49,7 @@ export const projectsData = [
         projectName: 'SplitSmart',
         projectDesc: 'SplitSmart is a modern, AI-powered expense sharing application designed to simplify group expense management.',
         tags: ['NextJs', 'Tailwind', 'Redux', 'JavaScript','TypeScript'],
-        code: 'https://github.com/VAIBHAV-25/ExpenseTracker',
+        code: 'https://github.com/VAIBHAV-25/SplitSmart',
         demo: 'https://bright-bonbon-42beac.netlify.app/',
         image: smartSplit
     },
